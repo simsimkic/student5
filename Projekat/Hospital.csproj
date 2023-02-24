@@ -1,0 +1,184 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9397F49B-ECDD-4B25-8508-62EBE815B314}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hospital</RootNamespace>
+    <AssemblyName>Hospital</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exception\InvalidDataException.cs" />
+    <Compile Include="Exception\InvalidDrugConfirmationException.cs" />
+    <Compile Include="Exception\InvalidEmailException.cs" />
+    <Compile Include="Exception\InvalidGradeException.cs" />
+    <Compile Include="Exception\InvalidTimeForAppointmentCancelation.cs" />
+    <Compile Include="Exception\TooLongFieldException.cs" />
+    <Compile Include="Exception\ValidationException.cs" />
+    <Compile Include="Hospital.cs" />
+    <Compile Include="Model\PatientReport.cs" />
+    <Compile Include="Model\WorkingTime.cs" />
+    <Compile Include="Model\RenovationType.cs" />
+    <Compile Include="Model\Therapy.cs" />
+    <Compile Include="Model\BugReport.cs" />
+    <Compile Include="Model\AppointmentReport.cs" />
+    <Compile Include="Model\GuestAppointment.cs" />
+    <Compile Include="Model\Feedback.cs" />
+    <Compile Include="Model\Drug.cs" />
+    <Compile Include="Model\DrugApprovalRequest.cs" />
+    <Compile Include="Model\NotificationDoctor.cs" />
+    <Compile Include="Model\NotificationPatient.cs" />
+    <Compile Include="Model\Guest.cs" />
+    <Compile Include="Model\Secretary.cs" />
+    <Compile Include="Model\RoomType.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\InventoryItem.cs" />
+    <Compile Include="Model\PatientFile.cs" />
+    <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\Warden.cs" />
+    <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\Doctor.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\City.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Notification.cs" />
+    <Compile Include="Model\NotificationFactory.cs" />
+    <Compile Include="Model\NotificationDoctorFactory.cs" />
+    <Compile Include="Model\NotificationPatientFactory.cs" />
+    <Compile Include="Model\BugReportLogger.cs" />
+    <Compile Include="Model\RoomRenovationArrangement.cs" />
+    <Compile Include="Controller\WorkingTimeController.cs" />
+    <Compile Include="Controller\GuestController.cs" />
+    <Compile Include="Controller\InventoryItemController.cs" />
+    <Compile Include="Controller\DrugApprovalRequestController.cs" />
+    <Compile Include="Controller\RoomController.cs" />
+    <Compile Include="Controller\DrugController.cs" />
+    <Compile Include="Controller\TherapyController.cs" />
+    <Compile Include="Controller\AppointmentController.cs" />
+    <Compile Include="Controller\GuestAppointmentController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controller\SecretaryController.cs" />
+    <Compile Include="Controller\WardenController.cs" />
+    <Compile Include="Controller\PatientController.cs" />
+    <Compile Include="Controller\DoctorController.cs" />
+    <Compile Include="Controller\NotificationPatientController.cs" />
+    <Compile Include="Controller\NoficationDoctorController.cs" />
+    <Compile Include="Controller\BugReportController.cs" />
+    <Compile Include="Controller\FeedbackController.cs" />
+    <Compile Include="Controller\RoomRenovationArrangementController.cs" />
+    <Compile Include="Repository\WorkingTimeRepository.cs" />
+    <Compile Include="Repository\NotificationPatientRepository.cs" />
+    <Compile Include="Repository\NotificationDoctorRepository.cs" />
+    <Compile Include="Repository\PatientFileRepository.cs" />
+    <Compile Include="Repository\TherapyRepository.cs" />
+    <Compile Include="Repository\DrugApprovalRequestRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\InventoryItemRepository.cs" />
+    <Compile Include="Repository\DrugRepository.cs" />
+    <Compile Include="Repository\RoomRepository.cs" />
+    <Compile Include="Repository\GuestRepository.cs" />
+    <Compile Include="Repository\GuestAppointmentRepository.cs" />
+    <Compile Include="Repository\WardenRepository.cs" />
+    <Compile Include="Repository\SecretaryRepository.cs" />
+    <Compile Include="Repository\DoctorRepository.cs" />
+    <Compile Include="Repository\PatientRepository.cs" />
+    <Compile Include="Repository\AppointmentRepository.cs" />
+    <Compile Include="Repository\FeedbackRepository.cs" />
+    <Compile Include="Repository\BugReportRepository.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\RoomRenovationArrangementRepository.cs" />
+    <Compile Include="Exception\EmptyFieldException.cs" />
+    <Compile Include="Exception\DrugNameNotUniqueException.cs" />
+    <Compile Include="Exception\DrugQuantityException.cs" />
+    <Compile Include="Service\GuestService.cs" />
+    <Compile Include="Service\DrugApprovalRequestService.cs" />
+    <Compile Include="Exception\InvalidDurationException.cs" />
+    <Compile Include="Exception\InvalidUserException.cs" />
+    <Compile Include="Service\InventoryItemService.cs" />
+    <Compile Include="Service\GuestAppointmentService.cs" />
+    <Compile Include="Exception\NoNameException.cs" />
+    <Compile Include="Exception\JmbgInvalidException.cs" />
+    <Compile Include="Exception\JmbgNotUniqueException.cs" />
+    <Compile Include="Exception\RoomSizeException.cs" />
+    <Compile Include="Exception\RoomTypeException.cs" />
+    <Compile Include="Exception\MaxInventoryItemsReachedException.cs" />
+    <Compile Include="Exception\MaxInventoryItemsInvalidException.cs" />
+    <Compile Include="Service\WorkingTimeService.cs" />
+    <Compile Include="Service\DrugService.cs" />
+    <Compile Include="Service\RoomService.cs" />
+    <Compile Include="Service\TherapyService.cs" />
+    <Compile Include="Service\AppointmentService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\SecretaryService.cs" />
+    <Compile Include="Service\WardenService.cs" />
+    <Compile Include="Service\PatientService.cs" />
+    <Compile Include="Service\DoctorService.cs" />
+    <Compile Include="Service\PatientFileService.cs" />
+    <Compile Include="Service\NotificationDoctorService.cs" />
+    <Compile Include="Service\NotificationPatientService.cs" />
+    <Compile Include="Service\UtilityService.cs" />
+    <Compile Include="Service\BugReportService.cs" />
+    <Compile Include="Service\FeedbackService.cs" />
+    <Compile Include="Service\RoomRenovationArrangementService.cs" />
+    <Compile Include="Service\INotification.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tables\Appointment.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
